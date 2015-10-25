@@ -57,7 +57,7 @@ sub _isNumber {
 }
 
 sub _isString {
-    if ( defined $_[0] && !ref $_[0] && !$self->isNumber($_[0]) ) {
+    if ( defined $_[0] && !ref $_[0] && !_isNumber($_[0]) ) {
         return 1;
     }
     return 0;
